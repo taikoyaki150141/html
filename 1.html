@@ -1,0 +1,30 @@
+<html lang="ja"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新しいウィンドウにURLを埋め込む</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="urlInput" placeholder="URLを入力" value="https://diabetesiscool.sprk.lol/">
+    <button onclick="openNewWindow()">open</button>
+
+    <script>
+        function openNewWindow() {
+            const urlInput = document.getElementById('urlInput').value;
+            const newWindow = window.open('about:blank', '_blank', 'width=800,height=600','location=no');
+            
+            newWindow.document.open();
+            newWindow.document.write('<html><head><title>pooop</title></head><body>');
+            newWindow.document.write('<iframe src="' + urlInput + '" style="width: 100%; height: 100%; border: none;position:fixed;top:0px;left:0px;"></iframe>');
+            newWindow.document.write('</body></html>');
+            newWindow.document.close();
+        }
+    </script>
+
+
+</body></html>
