@@ -1,6 +1,8 @@
 <html lang="ja"><head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>新しいウィンドウにURLを埋め込む</title>
     <style>
         body {
@@ -9,9 +11,11 @@
         }
     </style>
 </head>
-<body>
+
+    <body>
     <input type="text" id="urlInput" placeholder="URLを入力" value="https://diabetesiscool.sprk.lol/">
-    <button onclick="openNewWindow()">open</button>
+    <button onclick="openNewWindow()">open</button><br><br>
+    <button onclick="openNewWindowww()">open</button>
 
     <script>
         function openNewWindow() {
@@ -24,7 +28,47 @@
             newWindow.document.write('</body></html>');
             newWindow.document.close();
         }
+        function openNewWindowww() {
+            let urlInput = "https://diabetesiscool.sprk.lol/"
+            document.write(`<iframe src="https://diabetesiscool.sprk.lol/" style="width: 100%; height: 100%; border: none;position:fixed;top:0px;left:0px;"></iframe>`);}
     </script>
 
 
 </body></html>
+<style>
+    body {
+      background: #ddf5ff;
+    }
+    #container {
+      margin: 0 auto;
+    }
+  </style>
+   <style>
+    body { font-family: Arial, sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; } 
+    </style>
+        <style>
+            body {
+              background: #ddf5ff;
+            }
+            #container {
+              margin: 0 auto;
+            }
+          </style>
+          <style>
+      .example2 img{
+          /*コレ*/margin: 10px;
+      }
+      .example2{
+          border: 1px solid #333;
+          background: #e7edf8;
+      }
+      </style>
+      <style>
+        .container{
+          max-width: 1000px;
+          margin: 100px;
+          }
+      </style>
